@@ -24,7 +24,7 @@ import type { User } from "@/types/user";
 
 type Tab = "overview" | "appointments" | "history" | "profile";
 
-const BACKEND = process.env.NEXT_PUBLIC_API_URL?.replace("/api", "") ?? "http://localhost:5000";
+const BACKEND = process.env.NEXT_PUBLIC_API_URL?.replace("/api", "") ?? "https://doctime-backend-jqbp.onrender.com";
 
 function resolveAvatar(user: { name: string; avatar?: string | null }): string {
   if (user.avatar) return `${BACKEND}${user.avatar}`;
