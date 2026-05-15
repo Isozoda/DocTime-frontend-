@@ -32,7 +32,9 @@ export interface ScrollVideoRefs {
  */
 export function useScrollVideo(refs: ScrollVideoRefs, enabled: boolean): void {
   const refsRef = useRef(refs);
-  refsRef.current = refs; // always current, never stale
+  useEffect(() => {
+    refsRef.current = refs;
+  });
 
   useEffect(() => {
     if (!enabled) return;

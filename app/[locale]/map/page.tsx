@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { Link } from "@/navigation";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "https://doctime-backend-jqbp.onrender.com/api";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://doctime-backend-jqbp.onrender.com/api";
 
 /* ─── Types ─── */
 interface HospSpec { id: string; name: string; slug: string; color: string | null }

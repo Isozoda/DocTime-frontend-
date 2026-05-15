@@ -17,8 +17,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { avatarUrl } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 
-const BACKEND = process.env.NEXT_PUBLIC_API_URL?.replace("/api", "") ?? "https://doctime-backend-jqbp.onrender.com";
-
 function resolveAvatar(user: { name: string; avatar?: string | null }): string {
   return avatarUrl(user.name, user.avatar);
 }

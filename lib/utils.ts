@@ -22,7 +22,7 @@ export function formatTime(dateStr: string): string {
   return formatDate(dateStr, "HH:mm");
 }
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL?.replace("/api", "") ?? "https://doctime-backend-jqbp.onrender.com";
+export const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL?.replace("/api", "") ?? "https://doctime-backend-jqbp.onrender.com";
 
 export function avatarUrl(name: string, avatar?: string | null): string {
   if (avatar?.startsWith("/uploads/")) return `${BACKEND_URL}${avatar}`;
