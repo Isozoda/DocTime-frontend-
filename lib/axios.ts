@@ -7,7 +7,7 @@ import { getToken, removeToken } from "./auth";
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL || "https://doctime-backend-jqbp.onrender.com/api",
   headers: { "Content-Type": "application/json" },
-  timeout: 15000,
+  timeout: 60000,
 });
 
 api.interceptors.request.use((config) => {
